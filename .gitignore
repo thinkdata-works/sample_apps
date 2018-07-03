@@ -1,0 +1,5 @@
+java-example/repo/*
+java-example/**/*.iml
+java-example/.idea/*
+.idea/*
+
