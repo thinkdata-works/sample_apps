@@ -29,4 +29,7 @@ Add the jar file as a dependency in `pom.xml`
 
 # Development
 
-Please consult [the javadoc](https://thinkdata-works.github.io/namara-java-sdk/) for full usage.
+Please consult [the javadoc](https://thinkdata-works.github.io/namara-java-sdk/) for full usage of the library.
+
+Please also see the [the Namara Query API documentation](https://thinkdataworks.gitbook.io/namara/query-api) for details
+on using the query language. 

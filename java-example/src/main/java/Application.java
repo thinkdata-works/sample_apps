@@ -58,7 +58,7 @@ public class Application {
          * iterate through all of the query results
          */
         QueryBuilder queryBuilder1 = new QueryBuilder(10, 3)
-                .select().all()
+                .select().column("id AS ID").column("ST_AsGeoJson(ST_GeomFromText(geometry)) AS geojson")
                 .from().dataSet(identifier).getBuilder();
 
         ResultSet resultSet = new ResultSet(queryBuilder1, client);
@@ -104,7 +104,8 @@ public class Application {
          * https://thinkdataworks.gitbook.io/namara/query-api
          *
          */
-        QueryBuilder queryBuilder2 = new QueryBuilder("SELECT * FROM " + DATA_SET_ID + "/" + VERSION, 10, 3);
+        QueryBuilder queryBuilder2 = new QueryBuilder("SELECT id AS ID, ST_AsGeoJson(ST_GeomFromText(geometry)) AS geojson" +
+                " FROM " + DATA_SET_ID + "/" + VERSION, 10, 3);
 
         ResultSet resultSet2 = new ResultSet(queryBuilder2, client);
 
